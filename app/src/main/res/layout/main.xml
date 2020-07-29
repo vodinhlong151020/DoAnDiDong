@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/wp"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="                                         " />
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        
+        android:text="CHƯƠNG TRÌNH CVCOFFEE DÀNH CHO ANDROID" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/imgcoffee"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/caffee" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btndangnhap"
+            android:layout_width="200px"
+            android:layout_height="100px"
+            android:layout_gravity="center"
+            android:lines="1"
+            android:padding="10px"
+            android:text="Đăng Nhập" />
+
+        <Button
+            android:id="@+id/btnthongtin"
+            android:layout_width="200px"
+            android:layout_height="100px"
+            android:layout_gravity="center"
+            android:lines="1"
+            android:padding="10px"
+            android:text="Thông Tin" />
+
+        <Button
+            android:id="@+id/btngiupdo"
+            android:layout_width="200px"
+            android:layout_height="100px"
+            android:layout_gravity="center"
+            android:lines="1"
+            android:padding="10px"
+            android:text="Giúp Đỡ" />
+
+        <Button
+            android:id="@+id/btnthoat"
+            android:layout_width="200px"
+            android:layout_height="100px"
+            android:layout_gravity="center"
+            android:lines="1"
+            android:padding="10px"
+            android:text="Thoát" />
+    </LinearLayout>
+
+</LinearLayout>

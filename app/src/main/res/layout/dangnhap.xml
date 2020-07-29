@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wp"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/txt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="                               " />
+
+    <TextView
+        android:id="@+id/txtdangnhap"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="MỜI ĐĂNG NHẬP VÀO HỆ THỐNG" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/imgpass"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/pass" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/txttendangnhap"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Tên Đăng Nhập" />
+
+        <EditText
+            android:id="@+id/edtendangnhap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" >
+        </EditText>
+
+        <TextView
+            android:id="@+id/txtmatkhau"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Mật Khẩu" />
+
+        <EditText
+            android:id="@+id/edmatkhau"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword" >
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/btnlogin"
+            android:layout_width="200px"
+            android:layout_height="100px"
+            android:layout_gravity="center"
+            android:lines="1"
+            android:padding="10px"
+            android:text="Đăng Nhập" />
+    </LinearLayout>
+
+</LinearLayout>
