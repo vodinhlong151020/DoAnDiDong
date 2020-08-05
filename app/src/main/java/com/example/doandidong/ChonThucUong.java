@@ -25,15 +25,19 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.SpinnerAdapter;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 public class ChonThucUong extends Activity implements OnItemSelectedListener {
 
     // Biến tạo và nhập cơ sở dữ liệu
-    SQLiteDatabase dbs;
+    TextView textView;
     Boolean flag;
     Boolean c;
 
@@ -141,32 +145,6 @@ public class ChonThucUong extends Activity implements OnItemSelectedListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.chonthucuong);
 
-        try {
-            dbs = SQLiteDatabase.openDatabase("/data/data/com.example.doandidong/order", null,
-                    SQLiteDatabase.CREATE_IF_NECESSARY);
-            Toast.makeText(this, "Đã Tạo Thành Công Cơ Sở Dữ Liệu", 1).show();
-            flag = true;
-        } catch (SQLException e) {
-            // TODO: handle exception
-            Toast.makeText(this, e.getMessage(), 1).show();
-            flag = false;
-        }
-
-        c = false;
-
-        try {
-            if (c == true) {
-                Toast.makeText(this, "Bảng dữ liệu đã được tạo,mời bạn order thông tin", 1).show();
-            }
-            if (c == false) {
-                dbs.execSQL("create table danhsach(ID integer PRIMARY KEY autoincrement,Ngay text,Gio text,ban text,thucuong text,soluong text);");
-                Toast.makeText(this, "Đã tạo bảng danh sách order", 1).show();
-                c = true;
-            }
-        } catch (SQLException e) {
-            // TODO: handle exception
-            Toast.makeText(this, e.getMessage(), 1).show();
-        }
 
         txtchonthucuong = (TextView) findViewById(R.id.txtchonthucuong);
         txtchonthucuong.setTextColor(Color.RED);
@@ -195,7 +173,6 @@ public class ChonThucUong extends Activity implements OnItemSelectedListener {
                         nhandulieuban.putExtras(nhanban);
                         setResult(Activity.RESULT_OK, nhandulieuban);
                     }
-
                     if (ban2 != null) {
                         prepare(ban2);
                         nhanban.putString("hienthi2", "2");
@@ -532,9 +509,10 @@ public class ChonThucUong extends Activity implements OnItemSelectedListener {
         }
 
 
-        noidungorder = " " + ordercaphe + " " + ordersoluongcaphe + "\n" + ordersinhto + " " + ordersoluongsinhto
+          noidungorder = "\n" + ordercaphe + " " + ordersoluongcaphe + "\n" + ordersinhto + " " + ordersoluongsinhto
                 + "\n" + orderkhac + " " + ordersoluongkhac + "\n" + orderthuoc + " " + ordersoluongthuoc + "\n"
                 + ordernuocep + " " + ordersoluongnuocep + "\n" + ordernuocngot + " " + ordersoluongnuocngot;
+
 
         Intent nhandulieuban = getIntent();
         Bundle nhanban = nhandulieuban.getExtras();
@@ -743,7 +721,7 @@ public class ChonThucUong extends Activity implements OnItemSelectedListener {
 
     }
 
-    public long insert(String table, String sb, String nd, String sl) {
+     public long insert(String table, String sb, String nd, String sl) {
         Calendar cal = Calendar.getInstance();
         int intday = cal.get(Calendar.DAY_OF_MONTH);
         int intmounth = cal.get(Calendar.MONTH) + 1;
@@ -756,12 +734,12 @@ public class ChonThucUong extends Activity implements OnItemSelectedListener {
         ContentValues chen = new ContentValues();
         chen.put("Ngay", ngaythang);
         chen.put("Gio", thoigian);
-        chen.put("ban", sb);
-        chen.put("thucuong", nd);
-        chen.put("soluong", sl);
-        dbs.insert(table, null, chen);
+        textView = (TextView) findViewById(R.id.listHoadon);
+        textView.setText("\n\n\n Hoa Don Thanh Toan"+ "\n "+ chen +"\n"+ noidungorder);
+        Toast.makeText(this," "+ chen + " " + noidungorder, Toast.LENGTH_SHORT).show();
         return 0;
     }
+
 
 
     @SuppressLint("WrongConstant")

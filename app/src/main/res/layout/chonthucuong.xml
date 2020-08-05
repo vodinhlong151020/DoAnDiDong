@@ -211,6 +211,16 @@
         android:layout_alignParentRight="true" 
         android:entries="@array/listsoluongnuocngot"/>
 
+    <TextView
+        android:layout_alignTop="@id/spnlistnuocngot"
+        android:layout_alignBaseline="@+id/spnlistnuocngot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="40dp"
+        android:id="@+id/listHoadon"
+        android:textColor="@color/colorAccent"
+        tools:ignore="DuplicateIds"></TextView>
+
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="50px"

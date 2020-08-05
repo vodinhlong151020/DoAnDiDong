@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="15dp"
         android:gravity="center"
         android:text="MỜI BẠN CHỌN TẦNG ĐỂ QUẢN LÝ" />
 
@@ -33,7 +33,6 @@
         android:layout_above="@+id/imgtang1"
         android:layout_alignLeft="@+id/imgtang1"
         android:src="@drawable/tang"
-        android:layout_marginTop="70dp"
         />
 
     <TextView
@@ -52,7 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/txttang2"
         android:layout_alignTop="@+id/imgtang1"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="66dp"
         android:text="TẦNG 1"/>
 
 </RelativeLayout>
