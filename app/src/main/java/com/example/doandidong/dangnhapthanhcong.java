@@ -45,7 +45,7 @@ public class dangnhapthanhcong extends Activity {
 
             Toast.makeText(getApplicationContext(), "                 CHÚC MỪNG BẠN " +"\n"+ "                            "+nhanuser + "\n" + "        ĐÃ ĐĂNG NHẬP THÀNH CÔNG!",
                     Toast.LENGTH_SHORT).show();
-            Intent quanlinhansu = new Intent(dangnhapthanhcong.this, Quanlinhansu.class);
+            Intent quanlinhansu = new Intent(dangnhapthanhcong.this, MainActivity.class);
             startActivity(quanlinhansu);
 
         }
