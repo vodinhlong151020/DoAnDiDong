@@ -21,6 +21,7 @@ public class dangnhapthanhcong extends Activity {
         // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
         setContentView(R.layout.loginthanhcong);
+        setContentView(R.layout.quanlinhansu);
         txtthanhcong = (TextView) findViewById(R.id.txtthanhcong);
 
         Intent info = getIntent();
@@ -37,8 +38,18 @@ public class dangnhapthanhcong extends Activity {
 
             Toast.makeText(getApplicationContext(), "                 CHÚC MỪNG BẠN " +"\n"+ "                            "+nhanuser + "\n" + "        ĐÃ ĐĂNG NHẬP THÀNH CÔNG!",
                     Toast.LENGTH_SHORT).show();
+            Intent chontang = new Intent(dangnhapthanhcong.this, ChonTang.class);
+            startActivity(chontang);
+        }
+        else if(nhanuser.equals("Thinh") && nhanpass.equals("123")) {
 
-        } else {
+            Toast.makeText(getApplicationContext(), "                 CHÚC MỪNG BẠN " +"\n"+ "                            "+nhanuser + "\n" + "        ĐÃ ĐĂNG NHẬP THÀNH CÔNG!",
+                    Toast.LENGTH_SHORT).show();
+            Intent quanlinhansu = new Intent(dangnhapthanhcong.this, Quanlinhansu.class);
+            startActivity(quanlinhansu);
+
+        }
+        else {
 
             // trả về kết quả nếu ko đúng tên đăng nhập và mật khẩu
             null1 = "";
@@ -53,16 +64,7 @@ public class dangnhapthanhcong extends Activity {
 
         }
 
-        btnchontang = (Button) findViewById(R.id.btnchontang);
-        btnchontang.setOnClickListener(new View.OnClickListener() {
 
-            public void onClick(View arg0) {
-                // TODO Auto-generated method stub
-                Intent chontang = new Intent(dangnhapthanhcong.this, ChonTang.class);
-                startActivity(chontang);
-
-            }
-        });
 
     }
 }

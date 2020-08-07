@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Calendar;
+import java.util.Collections;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -38,11 +39,12 @@ public class ChonThucUong extends Activity implements OnItemSelectedListener {
 
     // Biến tạo và nhập cơ sở dữ liệu
     TextView textView;
+    ListView listView;
     Boolean flag;
     Boolean c;
 
     TextView txtchonthucuong;
-
+    String thoigian;
     Spinner spnlistcoffee;
     Spinner spnsoluongcoffee;
 
@@ -62,12 +64,19 @@ public class ChonThucUong extends Activity implements OnItemSelectedListener {
     Spinner spnlistsoluongnuocngot;
 
     Button btnquayvetang1;
+    Button btnthanhtoan;
     Button btnorder;
+    String ndordercafe;
+    String ndordernuocep;
+    String ndordersinhto;
+    String ndorderthuoc;
+    String ndorderkhac;
+    String ndordernuocngot;
 
-    String[] caphe = {"", "Ca Phe Da", "Cà Phê Sữa", "Cà Phê Chồn", "Cà Phê Rum", "Capuchino", "Expresso"};
+    String[] caphe = {"", "Cà phê đá 15000 VND", "Cà Phê Sữa 20000 VND", "Cà Phê Chồn 12000 VND", "Cà Phê Rum 14000VND", "Capuchino 11000VND", "Expresso"};
     String[] soluongcaphe = {"", "1", "2", "3", "4", "5", "6", "7"};
 
-    String[] sinhto = {"", "Sinh To Ot", "Sinh Tố Tỏi", "Sinh Tố Hành", "Sinh Tố Pơ", "Sinh Tố Dừa", "Sinh Tố Mãng Cầu"};
+    String[] sinhto = {"", "Sinh To Ot 20000 VND", "Sinh Tố Tỏi 25000 VND", "Sinh Tố Hành 22000 VND", "Sinh Tố Pơ 23000 VND", "Sinh Tố Dừa 18000 VND", "Sinh Tố Mãng Cầu 26000k VND"};
     String[] soluongsinhto = {"", "1", "2", "3", "4", "5", "6", "7"};
 
     String[] thuoc = {"", "555", "Marboro", "Caraven", "JET"};
@@ -103,6 +112,7 @@ public class ChonThucUong extends Activity implements OnItemSelectedListener {
     String sodienthoai = "15555215556";
     String noidungorder;
 
+
     String soban1;
 
     String ban1;
@@ -137,6 +147,7 @@ public class ChonThucUong extends Activity implements OnItemSelectedListener {
     Boolean tl = false;
     Boolean ne = false;
     Boolean nn = false;
+    Button btnThanhtoan;
 
     @SuppressLint("WrongConstant")
     @Override
@@ -145,12 +156,23 @@ public class ChonThucUong extends Activity implements OnItemSelectedListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.chonthucuong);
 
+        listView = (ListView) findViewById(R.id.listHoadon) ;
 
         txtchonthucuong = (TextView) findViewById(R.id.txtchonthucuong);
         txtchonthucuong.setTextColor(Color.RED);
 
         spnlistcoffee = (Spinner) findViewById(R.id.spnlistcoffee);
         spnlistsinhto = (Spinner) findViewById(R.id.spnlistsinhto);
+
+        btnThanhtoan = (Button) findViewById(R.id.btnthanhtoan);
+        btnThanhtoan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent thanhToan = new Intent(ChonThucUong.this, ThanhToan.class);
+                startActivity(thanhToan);
+            }
+        });
+
 
         btnorder = (Button) findViewById(R.id.btnorder);
         btnorder.setText("ORDER");
@@ -446,7 +468,6 @@ public class ChonThucUong extends Activity implements OnItemSelectedListener {
                     Toast.makeText(getApplicationContext(), ordersoluongcaphe + " " + ordercaphe, Toast.LENGTH_SHORT)
                             .show();
                     cf = true;
-
                 }
 
                 break;
@@ -508,10 +529,24 @@ public class ChonThucUong extends Activity implements OnItemSelectedListener {
 
         }
 
+        Calendar cal = Calendar.getInstance();
+        int intday = cal.get(Calendar.DAY_OF_MONTH);
+        int intmounth = cal.get(Calendar.MONTH) + 1;
+        int intyear = cal.get(Calendar.YEAR);
+        int intgio = cal.get(Calendar.HOUR_OF_DAY);
+        int intphut = cal.get(Calendar.MINUTE);
 
-          noidungorder = "\n" + ordercaphe + " " + ordersoluongcaphe + "\n" + ordersinhto + " " + ordersoluongsinhto
+        String thoigian = String.valueOf(intgio) + ":" + String.valueOf(intphut);
+        String ngaythang = String.valueOf(intday) + "/" + String.valueOf(intmounth);
+        ContentValues chen = new ContentValues();
+        chen.put("Ngay", ngaythang);
+        chen.put("Gio", thoigian);
+
+
+          noidungorder = "\n" + chen + "\n" + ordercaphe + " " + ordersoluongcaphe + "\n" + ordersinhto + " " + ordersoluongsinhto
                 + "\n" + orderkhac + " " + ordersoluongkhac + "\n" + orderthuoc + " " + ordersoluongthuoc + "\n"
-                + ordernuocep + " " + ordersoluongnuocep + "\n" + ordernuocngot + " " + ordersoluongnuocngot;
+               + ordernuocep + " " + ordersoluongnuocep + "\n" + ordernuocngot + " " + ordersoluongnuocngot;
+
 
 
         Intent nhandulieuban = getIntent();
@@ -722,21 +757,10 @@ public class ChonThucUong extends Activity implements OnItemSelectedListener {
     }
 
      public long insert(String table, String sb, String nd, String sl) {
-        Calendar cal = Calendar.getInstance();
-        int intday = cal.get(Calendar.DAY_OF_MONTH);
-        int intmounth = cal.get(Calendar.MONTH) + 1;
-        int intyear = cal.get(Calendar.YEAR);
-        int intgio = cal.get(Calendar.HOUR_OF_DAY);
-        int intphut = cal.get(Calendar.MINUTE);
 
-        String thoigian = String.valueOf(intgio) + ":" + String.valueOf(intphut);
-        String ngaythang = String.valueOf(intday) + "/" + String.valueOf(intmounth);
-        ContentValues chen = new ContentValues();
-        chen.put("Ngay", ngaythang);
-        chen.put("Gio", thoigian);
-        textView = (TextView) findViewById(R.id.listHoadon);
-        textView.setText("\n\n\n Hoa Don Thanh Toan"+ "\n "+ chen +"\n"+ noidungorder);
-        Toast.makeText(this," "+ chen + " " + noidungorder, Toast.LENGTH_SHORT).show();
+        ArrayAdapter<String> addnoidung = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,
+                 Collections.singletonList(noidungorder));
+       listView.setAdapter(addnoidung);
         return 0;
     }
 

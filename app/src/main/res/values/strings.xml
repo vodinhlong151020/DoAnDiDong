@@ -103,4 +103,15 @@
         <item >6</item>
 
     </string-array>
+
+    <string name="tvSoBan">Số bàn: </string>
+    <string name="tvSoHD">Số hóa đơn: </string>
+    <string name="tvThuNgan">Thu ngân: </string>
+    <string name="tvGia">Giá: </string>
+    <string name="tvSoLuong">Số lượng: </string>
+    <string name="tvVAT">VAT: </string>
+    <string name="tvTongCong">Tổng cộng: </string>
+    <string name="edtSoLuong">0</string>
+    <string name="btnXuatHD">XUẤT HÓA ĐƠN</string>
+    <string name="btnBack">TRỞ VỀ</string>
 </resources>

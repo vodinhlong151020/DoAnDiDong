@@ -22,6 +22,10 @@
         <activity android:name="Tang1"></activity>
         <activity android:name="Tang2"></activity>
         <activity android:name="ChonThucUong"></activity>
+        <activity android:name="Quanlinhansu"></activity>
+        <activity android:name="ThanhToan"></activity>
+
+
 
     </application>
 

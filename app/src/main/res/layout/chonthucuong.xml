@@ -65,15 +65,7 @@
         android:layout_alignParentRight="true"
         android:entries="@array/listsoluongsinhto" />
 
-    <Button
-        android:id="@+id/btnquayvetang1"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="200px"
-        android:layout_height="100px"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="16dp"
-        android:layout_toLeftOf="@+id/spnlistsinhto"
-        android:text="Quay Về" />
+
 
     <Spinner
         android:id="@+id/spnsoluongcoffee"
@@ -198,9 +190,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/spnlistnuocep"
         android:layout_alignLeft="@+id/spnlistnuocep"
-        android:layout_marginTop="14dp"
+        android:layout_marginLeft="-3dp"
+        android:layout_marginTop="8dp"
         android:entries="@array/listnuocngot" />
-
 
     <Spinner
         android:id="@+id/spnlistsoluongnuocngot"
@@ -211,15 +203,14 @@
         android:layout_alignParentRight="true" 
         android:entries="@array/listsoluongnuocngot"/>
 
-    <TextView
-        android:layout_alignTop="@id/spnlistnuocngot"
-        android:layout_alignBaseline="@+id/spnlistnuocngot"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="40dp"
+    <ListView
         android:id="@+id/listHoadon"
-        android:textColor="@color/colorAccent"
-        tools:ignore="DuplicateIds"></TextView>
+        android:layout_width="match_parent"
+        android:layout_height="344dp"
+        android:layout_alignTop="@id/spnlistnuocngot"
+        android:layout_marginTop="47dp"
+        android:outlineAmbientShadowColor="@color/colorAccent"
+        tools:ignore="DuplicateIds"></ListView>
 
     <ImageView
         android:id="@+id/imageView1"
@@ -232,26 +223,39 @@
         tools:ignore="DuplicateIds" />
 
     <Button
+        android:id="@+id/btnquayvetang1"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="200px"
+        android:layout_height="100px"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="-14dp"
+        android:layout_marginBottom="22dp"
+        android:layout_toLeftOf="@+id/spnlistsinhto"
+        android:text="Quay Về" />
+
+    <Button
         android:id="@+id/btnorder"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="200px"
         android:layout_height="100px"
-        android:layout_marginLeft="40dp"
         android:layout_alignBaseline="@+id/btnquayvetang1"
-        android:layout_alignBottom="@+id/btnquayvetang1"
         android:layout_alignLeft="@+id/spnlistnuocngot"
+        android:layout_alignBottom="@+id/btnquayvetang1"
+        android:layout_marginLeft="36dp"
+        android:layout_marginBottom="-691dp"
         android:text="ORDER" />
+
     <Button
-        android:id="@+id/bththanhtoan"
+        android:id="@+id/btnthanhtoan"
+        style="?android:attr/buttonStyleSmall"
         android:layout_width="300px"
         android:layout_height="100px"
-        style="?android:attr/buttonStyleSmall"
         android:layout_alignBaseline="@+id/btnquayvetang1"
-        android:layout_alignBottom="@+id/btnquayvetang1"
         android:layout_alignLeft="@+id/spnlistnuocngot"
-        android:layout_marginLeft="150dp"
-        android:text="ThanhToan"
-        />
+        android:layout_alignBottom="@+id/btnquayvetang1"
+        android:layout_marginLeft="198dp"
+        android:layout_marginBottom="4dp"
+        android:text="ThanhToan" />
 
 
 </RelativeLayout>
