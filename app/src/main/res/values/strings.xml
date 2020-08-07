@@ -18,6 +18,17 @@
         <item >Sinh Tố Mãng Cầu</item>
 
     </string-array>
+    <string name="tenquan_hoadon">PINEAPPLE COFFEE</string>
+    <string name="diachi_hoadon">Địa chỉ: 53 Võ Văn Ngân-P.Linh Chiểu-Q.Thủ Đức</string>
+    <string name="sdt_hoadon">ĐT: 0914566781</string>
+    <string name="hoadonthanhtoan">HÓA ĐƠN THANH TOÁN</string>
+    <string name="thungan_hoadon">Thu Ngân: </string>
+    <string name="ngay_hoadon">Ngày: </string>
+    <string name="sohoadon_hoadon">Số hóa đơn: </string>
+    <string name="Ban_hoadon">Bàn: </string>
+    <string name="tongcong_hoadon">Tổng cộng:</string>
+    <string name="vat_hoadon">VAT:</string>
+    <string name="thanhtoan_hoadon">Thanh Toán </string>
     <string-array name="listsoluongcoffee">
         <item >Số lượng</item>
         <item >1</item>

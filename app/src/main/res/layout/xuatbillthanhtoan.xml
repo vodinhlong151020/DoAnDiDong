@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/tenquan_hoadon"
+            android:textColor="@color/colorBlack"
+            android:textSize="30dp"
+            android:textStyle="bold"></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/diachi_hoadon"
+            android:textColor="@color/colorBlack"></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sdt_hoadon"
+            android:textColor="@color/colorBlack"></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="@string/hoadonthanhtoan"
+            android:textColor="@color/colorBlack"
+            android:textSize="20dp"
+            android:textStyle="bold"></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/thungan_hoadon"
+                android:textColor="@color/colorBlack"
+                android:textSize="13dp"></TextView>
+            <EditText
+                android:layout_width="88dp"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"></EditText>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ngay_hoadon"
+                android:textColor="@color/colorBlack"
+                android:textSize="13dp"></TextView>
+            <EditText
+                android:layout_width="82dp"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"></EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sohoadon_hoadon"
+                android:textColor="@color/colorBlack"
+                android:textSize="13dp"></TextView>
+            <EditText
+                android:layout_width="88dp"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"></EditText>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Ban_hoadon"
+                android:textColor="@color/colorBlack"
+                android:textSize="13dp"></TextView>
+            <EditText
+                android:layout_width="82dp"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"></EditText>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="THỨC UỐNG       SỐ LƯỢNG      THÀNH TIỀN"
+            android:textColor="@color/colorBlack"
+            android:textSize="20dp"
+            android:textStyle="bold">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cà phê sữa          Số lượng 2          44000đ"
+            android:textColor="@color/colorBlack"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cà phê đen          Số lượng 2          20000đ"
+            android:textColor="@color/colorBlack"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sinh tố bơ            Số lượng 2          76000đ"
+            android:textColor="@color/colorBlack"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sinh tố dâu          Số lượng 1           44000đ"
+            android:textColor="@color/colorBlack"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Red bull               Số lượng 2            44000đ"
+            android:textColor="@color/colorBlack"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp">
+        </TextView>
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tongcong_hoadon"
+                android:textColor="@color/colorBlack"
+                android:textSize="15dp"
+                android:textStyle="bold"></TextView>
+            <EditText
+                android:layout_width="143dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:textSize="15dp"></EditText>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/vat_hoadon"
+                android:textColor="@color/colorBlack"
+                android:textSize="15dp"
+                android:paddingLeft="10dp"
+                android:textStyle="bold"></TextView>
+
+            <EditText
+                android:layout_width="186dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:textSize="15dp"
+                android:textStyle="bold"></EditText>
+
+            <Button
+                android:id="@+id/btnbill"
+                android:layout_width="143dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:background="@color/colorGreen"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:textColor="@color/colorWhite"
+                android:gravity="center"
+                android:text="@string/thanhtoan_hoadon"></Button>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/thanhtoan_hoadon"
+                android:textColor="@color/colorBlack"
+                android:textSize="15dp"
+                android:paddingLeft="10dp"
+                android:textStyle="bold"></TextView>
+            <EditText
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:textSize="15dp"></EditText>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -13,6 +13,7 @@ import android.widget.TextView;
 public class ThanhToan extends Activity {
 
     Button btnback;
+    Button btnXuatBill;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,5 +30,13 @@ public class ThanhToan extends Activity {
             }
         });
 
+         btnXuatBill= (Button) findViewById(R.id.btnXuatHD);
+        btnXuatBill.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent xuatbill = new Intent(ThanhToan.this, XuatBill.class);
+                startActivity(xuatbill);
+            }
+        });
     }
 }
