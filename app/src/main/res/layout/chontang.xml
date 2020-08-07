@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wp"
+    android:orientation="vertical" >
+
+
+    <TextView
+        android:id="@+id/txtchontang"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="MỜI BẠN CHỌN TẦNG ĐỂ QUẢN LÝ" />
+
+    <ImageView
+        android:id="@+id/imgtang1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/tang"
+         />
+
+    <ImageView
+        android:id="@+id/imgtang2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imgtang1"
+        android:layout_alignLeft="@+id/imgtang1"
+        android:src="@drawable/tang"
+        />
+
+    <TextView
+        android:id="@+id/txttang2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/imgtang2"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="64dp"
+        android:text="TẦNG 2"/>
+
+    <TextView
+        android:id="@+id/txttang1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/txttang2"
+        android:layout_alignTop="@+id/imgtang1"
+        android:layout_marginTop="66dp"
+        android:text="TẦNG 1"/>
+
+</RelativeLayout>
