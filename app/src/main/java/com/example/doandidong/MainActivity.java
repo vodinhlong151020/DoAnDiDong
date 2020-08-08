@@ -23,11 +23,20 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<NhanVien> list;
     AdapterNhanVien adapter;
     Button btnAdd;
-
+    Button btnDangXuat;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        btnDangXuat = (Button) findViewById(R.id.btnDangxuat);
+        btnDangXuat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent dangxuat = new Intent(MainActivity.this, DangNhap.class);
+                startActivity(dangxuat);
+            }
+        });
 
         addControls();
         readData();

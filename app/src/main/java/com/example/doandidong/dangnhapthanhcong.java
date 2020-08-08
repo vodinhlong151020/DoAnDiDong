@@ -20,8 +20,6 @@ public class dangnhapthanhcong extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.loginthanhcong);
-        txtthanhcong = (TextView) findViewById(R.id.txtthanhcong);
 
         Intent info = getIntent();
         Bundle nhan_goi_data_login = info.getExtras();
