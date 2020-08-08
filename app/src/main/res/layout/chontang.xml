@@ -23,11 +23,13 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="15dp"
+        android:layout_marginLeft="30dp"
         android:src="@drawable/tang"
          />
 
     <ImageView
         android:id="@+id/imgtang2"
+        android:layout_marginLeft="30dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/imgtang1"
@@ -51,7 +53,16 @@
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/txttang2"
         android:layout_alignTop="@+id/imgtang1"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="14dp"
         android:layout_marginTop="66dp"
         android:text="TẦNG 1"/>
 
+    <Button
+        android:id="@+id/btnDangxuat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Đăng Xuất"></Button>
 </RelativeLayout>

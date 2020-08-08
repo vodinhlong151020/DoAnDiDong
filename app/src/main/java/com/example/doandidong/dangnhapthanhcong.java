@@ -21,7 +21,6 @@ public class dangnhapthanhcong extends Activity {
         // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
         setContentView(R.layout.loginthanhcong);
-        setContentView(R.layout.quanlinhansu);
         txtthanhcong = (TextView) findViewById(R.id.txtthanhcong);
 
         Intent info = getIntent();
